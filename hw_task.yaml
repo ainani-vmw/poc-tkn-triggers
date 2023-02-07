@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: hello
+spec:
+  steps:
+    - name: echo
+      image: projects.registry.vmware.com/photon/photon3@sha256:290157fdb67d1c29a73786fb43d001d4ac59092baa5b9a87209e940db54a3181
+      script: |
+        #!/bin/sh
+        echo "Hello World"
